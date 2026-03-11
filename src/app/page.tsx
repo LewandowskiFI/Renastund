@@ -240,7 +240,7 @@ export default function Home() {
                   <textarea id="contact-message" name="message" className={styles.formTextarea} required placeholder="Hei, haluaisin..."></textarea>
                 </div>
                 
-                <button type="submit" disabled={isContactSubmitting} className={`${styles.btn} ${styles.btnPrimary} ${styles.formSubmit}`}>
+                <button type="submit" disabled={isContactSubmitting} className={`btn btn-primary ${styles.formSubmit}`}>
                   {isContactSubmitting ? 'Lähetetään...' : 'Lähetä viesti'}
                 </button>
 
@@ -260,7 +260,7 @@ export default function Home() {
         <div className={styles.container}>
           <p>© {new Date().getFullYear()} Renastund. Kaikki oikeudet pidätetään.</p>
           <div className={styles.footerLinks}>
-            <a href="#">Tietosuojaseloste</a>
+            <a href="/tietosuojaseloste">Tietosuojaseloste</a>
           </div>
         </div>
       </footer>

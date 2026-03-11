@@ -352,6 +352,20 @@
   .formCol {
     order: 1;
     padding: 32px 24px;
+    overflow: visible;
+  }
+
+  .submitBtn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    font-size: 1.1rem;
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    border: none;
+    box-shadow: 0 4px 14px 0 rgba(14, 165, 233, 0.39);
   }
 }
 
@@ -363,5 +377,13 @@
   
   .orderSection {
     padding: 40px 0;
+  }
+
+  .formCol {
+    padding: 24px 16px;
+  }
+
+  .container {
+    padding: 0 16px;
   }
 }

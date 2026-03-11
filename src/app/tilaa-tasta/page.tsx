@@ -252,7 +252,7 @@ export default function OrderPage() {
                   </label>
                 </div>
 
-                <button type="submit" disabled={isSubmitting} className={`${styles.btn} ${styles.btnPrimary} ${styles.submitBtn}`}>
+                <button type="submit" disabled={isSubmitting} className={`btn btn-primary ${styles.submitBtn}`}>
                   {isSubmitting ? 'Lähetetään...' : 'Lähetä tilaus'}
                 </button>
 

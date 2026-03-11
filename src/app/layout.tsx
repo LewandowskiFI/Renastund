@@ -5,6 +5,7 @@ import PageTransition from './components/PageTransition';
 import FloatingButton from './components/FloatingButton';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://renastund.fi'),
   title: 'Renastund | Siivousliinojen Vuokraus ja Pesupalvelu',
   description: 'Yhdistämme kestävyyden, edullisuuden ja helppouden. Renastund tarjoaa laadukkaat siivousliinat yrityksellesi säännöllisesti pestynä ja toimitettuna.',
 };
