@@ -11,7 +11,7 @@ export const metadata = {
 const teamMembers = [
   {
     name: 'Eliel Seppänen',
-    role: 'Perustaja, Jyväskylä',
+    role: 'Perustaja',
     phone: '044 976 3323',
     email: 'eliel.seppanen@renastund.fi',
     location: 'Jyväskylä',
@@ -19,7 +19,7 @@ const teamMembers = [
   },
   {
     name: 'Eelis Seppänen',
-    role: 'Perustaja, Tampere',
+    role: 'Perustaja',
     phone: '044 976 3290',
     email: 'eelis.seppanen@renastund.fi',
     location: 'Tampere',
@@ -27,7 +27,7 @@ const teamMembers = [
   },
   {
     name: 'Ellenoora Koponen',
-    role: 'Asiakkuudet, Jyväskylä',
+    role: 'Asiakkuudet',
     phone: '040 724 4488',
     email: 'ellenoora.koponen@renastund.fi',
     location: 'Jyväskylä',
