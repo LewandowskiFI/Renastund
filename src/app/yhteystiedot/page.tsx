@@ -62,7 +62,6 @@ export default function ContactsPage() {
               </div>
               <div className={styles.memberInfo}>
                 <h3 className={styles.memberName}>{member.name}</h3>
-                <p className={styles.memberRole}>{member.role}</p>
                 
                 <div className={styles.contactLinks}>
                   <a href={`tel:${member.phone.replace(/\s+/g, '')}`} className={styles.contactLink}>

@@ -102,62 +102,20 @@ export default function Home() {
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Tuotteet</h2>
           </div>
-          
-          <div className={styles.pricingAndContactWrapper}>
-            <motion.div 
-              className={styles.pricingInfoBox}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h3 className={styles.pricingStarting}>
-                Hinnat alkaen 99€ <span>alv 0%</span>
-              </h3>
-              <p className={styles.pricingDescription}>
-                Hinta määräytyy liinojen määrän sekä ravintolan sijainnin perusteella. Ota yhteyttä lomakkeen kautta, niin katsotaan teille sopiva paketti.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              className={styles.contactFormWrapper}
-              style={{ marginTop: '40px', maxWidth: '800px', margin: '40px auto 0' }}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <form onSubmit={onContactSubmit}>
-                <input type="checkbox" name="botcheck" style={{ display: 'none' }} />
-                
-                <div className={styles.formGroup}>
-                  <label htmlFor="contact-name" className={styles.formLabel}>Nimi</label>
-                  <input type="text" id="contact-name" name="name" className={styles.formInput} required placeholder="Matti Meikäläinen" />
-                </div>
-                
-                <div className={styles.formGroup}>
-                  <label htmlFor="contact-email" className={styles.formLabel}>Sähköposti</label>
-                  <input type="email" id="contact-email" name="email" className={styles.formInput} required placeholder="matti@yritys.fi" />
-                </div>
-                
-                <div className={styles.formGroup}>
-                  <label htmlFor="contact-message" className={styles.formLabel}>Viesti</label>
-                  <textarea id="contact-message" name="message" className={styles.formTextarea} required placeholder="Hei, haluaisin..."></textarea>
-                </div>
-                
-                <button type="submit" disabled={isContactSubmitting} className={`btn btn-primary ${styles.formSubmit}`}>
-                  {isContactSubmitting ? 'Lähetetään...' : 'Lähetä viesti'}
-                </button>
-
-                {contactResult === 'success' && (
-                  <p className={styles.contactSuccess}>✅ Viesti lähetetty! Palaamme sinulle pian.</p>
-                )}
-                {contactResult === 'error' && (
-                  <p className={styles.contactError}>❌ Jokin meni pieleen. Yritä uudelleen.</p>
-                )}
-              </form>
-            </motion.div>
-          </div>
+          <motion.div 
+            className={styles.pricingInfoBox}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h3 className={styles.pricingStarting}>
+              Hinnat alkaen 99€ <span>alv 0%</span>
+            </h3>
+            <p className={styles.pricingDescription}>
+              Hinta määräytyy liinojen määrän sekä ravintolan sijainnin perusteella. Ota yhteyttä lomakkeen kautta, niin katsotaan teille sopiva paketti.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -239,14 +197,14 @@ export default function Home() {
       {/* Team / Contact Footer */}
       <section id="yhteys" className={styles.contactSection}>
         <div className={styles.container}>
-          <div className={styles.contactGrid} style={{ gridTemplateColumns: '1fr', textAlign: 'center' }}>
+          <div className={styles.contactGrid}>
             <div className={styles.contactInfo}>
               <h2>Meistä</h2>
               <p>
                 Olemme Jyväskylästä ja Tampereelta kotoisin oleva yrittäjähenkinen tiimi. Ota yhteyttä, niin katsotaan teille sopiva paketti!
               </p>
               
-              <div className={styles.teamGrid} style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '40px', marginTop: '40px' }}>
+              <div className={styles.teamGrid}>
                 <div className={styles.teamMember}>
                   <h4>Eliel Seppänen</h4>
                   <span>044 976 3323</span>
@@ -263,6 +221,38 @@ export default function Home() {
                   <a href="mailto:ellenoora.koponen@renastund.fi">ellenoora.koponen@renastund.fi</a>
                 </div>
               </div>
+            </div>
+
+            <div className={styles.contactFormWrapper}>
+              <form onSubmit={onContactSubmit}>
+                <input type="checkbox" name="botcheck" style={{ display: 'none' }} />
+                
+                <div className={styles.formGroup}>
+                  <label htmlFor="contact-name" className={styles.formLabel}>Nimi</label>
+                  <input type="text" id="contact-name" name="name" className={styles.formInput} required placeholder="Matti Meikäläinen" />
+                </div>
+                
+                <div className={styles.formGroup}>
+                  <label htmlFor="contact-email" className={styles.formLabel}>Sähköposti</label>
+                  <input type="email" id="contact-email" name="email" className={styles.formInput} required placeholder="matti@yritys.fi" />
+                </div>
+                
+                <div className={styles.formGroup}>
+                  <label htmlFor="contact-message" className={styles.formLabel}>Viesti</label>
+                  <textarea id="contact-message" name="message" className={styles.formTextarea} required placeholder="Hei, haluaisin..."></textarea>
+                </div>
+                
+                <button type="submit" disabled={isContactSubmitting} className={`btn btn-primary ${styles.formSubmit}`}>
+                  {isContactSubmitting ? 'Lähetetään...' : 'Lähetä viesti'}
+                </button>
+
+                {contactResult === 'success' && (
+                  <p className={styles.contactSuccess}>✅ Viesti lähetetty! Palaamme sinulle pian.</p>
+                )}
+                {contactResult === 'error' && (
+                  <p className={styles.contactError}>❌ Jokin meni pieleen. Yritä uudelleen.</p>
+                )}
+              </form>
             </div>
           </div>
         </div>
