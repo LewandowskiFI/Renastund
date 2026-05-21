@@ -64,10 +64,10 @@ export default function Home() {
             Yhdistämme kestävyyden, edullisuuden ja helppouden - jotta yrityksesi voi keskittyä olennaiseen.
           </p>
           <div className={styles.heroActions}>
-            <a href="#tilaa" className={`${styles.btn} ${styles.btnPrimary}`}>
+            <a href="#tilaa" className="btn btn-primary">
               Tilaa palvelu
             </a>
-            <a href="#yhteys" className={`${styles.btn} ${styles.btnOutline}`}>
+            <a href="#yhteys" className="btn btn-outline">
               Ota yhteyttä
             </a>
           </div>
@@ -80,7 +80,7 @@ export default function Home() {
           <h2 className={styles.referencesTitle}>Tyytyväiset asiakkaamme</h2>
         </div>
         <div className={styles.referencesTrack}>
-          {[...Array(2)].map((_, i) => (
+          {[...Array(4)].map((_, i) => (
             <div key={i} style={{ display: 'flex', gap: '80px', paddingRight: '80px' }}>
               <div className={styles.referenceItem}>
                 <img src="/ref-1.jpg" alt="Semma" />
