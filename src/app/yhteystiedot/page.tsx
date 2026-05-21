@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import styles from './page.module.css';
 
 export const metadata = {
@@ -72,10 +72,6 @@ export default function ContactsPage() {
                     <Mail size={20} />
                     <span>{member.email}</span>
                   </a>
-                  <div className={styles.contactLink}>
-                    <MapPin size={20} />
-                    <span>{member.location}</span>
-                  </div>
                 </div>
               </div>
             </div>
