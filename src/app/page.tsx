@@ -76,6 +76,9 @@ export default function Home() {
 
       {/* References Section */}
       <section className={styles.references}>
+        <div className={styles.container}>
+          <h2 className={styles.referencesTitle}>Tyytyväiset asiakkaamme</h2>
+        </div>
         <div className={styles.referencesTrack}>
           {[...Array(2)].map((_, i) => (
             <div key={i} style={{ display: 'flex', gap: '80px', paddingRight: '80px' }}>
