@@ -102,9 +102,6 @@ export default function Home() {
       {/* Products & Contact Section */}
       <section id="tilaa" className={styles.products}>
         <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Tuotteet</h2>
-          </div>
           <motion.div 
             className={styles.pricingInfoBox}
             initial={{ opacity: 0, y: 30 }}
